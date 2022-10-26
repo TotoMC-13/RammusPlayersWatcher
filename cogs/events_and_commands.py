@@ -31,12 +31,12 @@ class events_and_commands(commands.Cog):
         await channel.send("Edita la descripcion del canal para cambiar el mensaje que el bot manda.")
 
 
-    @app_commands.command(name="ejemplo", description="Ejemplo de como se ve el mensaje.")
+    @app_commands.command(name="ejemplo", description="Mensaje de ejemplo.")
     async def ejemplo(self, interaction: discord.Interaction):
         await interaction.response.send_message(f"Jugador de Rammus detectado, {interaction.user.mention} **Aqui va la descripcion del canal en el cual el bot manda el aviso, usala para personalizar tu mensaje. Este ya tiene un punto al final por defecto**.")
 
 
-    @app_commands.command(name="mandar_mensaje", description="Ejemplo de como se ve el mensaje.")
+    @app_commands.command(name="mandar_mensaje", description="Manda un mensaje para que puedas ver como va a enviarse.")
     async def mandar_mensaje(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
 
