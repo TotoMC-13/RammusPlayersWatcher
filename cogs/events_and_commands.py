@@ -7,6 +7,7 @@ class events_and_commands(commands.Cog):
     def __init__(self, client: commands.Bot) -> None:
         self.client = client
 
+
     @commands.Cog.listener()
     async def on_presence_update(self, _, member_after: discord.Member):
         if hasattr(member_after, "activity") and hasattr(member_after, "large_image_text") and "Rammus" in member_after.activity.large_image_text:
